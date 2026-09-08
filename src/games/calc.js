@@ -5,7 +5,7 @@ const playCalc = (userName) => {
         const number1 = Math.ceil(Math.random()*100);
         const number2 = Math.ceil(Math.random()*100);
         const actions = ['+', '-', '*'];
-        const action = actions[Math.ceil(Math.random()*actions.length)];
+        const action = actions[Math.floor(Math.random() * actions.length)];
         let correctAnswer;
         switch (action) {
             case '+': 
