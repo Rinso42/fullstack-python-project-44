@@ -1,5 +1,4 @@
-import readlineSync from 'readline-sync';
-
+import getAnswer from '../getAnswer';
 const evenCheck = (number) => number % 2 === 0;
 const playIsEven = (userName) => {
     console.log ('Answer "yes" if the number is even, otherwise answer "no".');
@@ -7,7 +6,7 @@ const playIsEven = (userName) => {
         const number = Math.ceil(Math.random()*100);
         const correctAnswer = evenCheck(number) ? 'yes' : 'no';
         console.log(`Question: ${number}`);
-        const userAnswer = readlineSync.question('Your answer: ')
+        const userAnswer = getAnswer();
         if (userAnswer !== correctAnswer) {
             console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
             console.log(`Let's try again, ${userName}!`);
