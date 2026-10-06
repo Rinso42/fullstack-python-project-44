@@ -1,7 +1,8 @@
 import getAnswer from './getAnswer.js';
 const playGame = (userName, description, game) => {
-  console.log(description);
-  for (let round = 0; round < 3; round += 1) {
+  const roundCount = 3
+  console.log(description)
+  for (let currentRound = 0; currentRound < roundCount; currentRound += 1) {
     const [question, correctAnswer] = game();
     console.log(`Question: ${question}`);
     const userAnswer = getAnswer();

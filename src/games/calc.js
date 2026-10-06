@@ -1,6 +1,8 @@
+export const description = 'What is the result of the expression?';
 const playCalc = () => {
-  const number1 = Math.ceil(Math.random() * 100);
-  const number2 = Math.ceil(Math.random() * 100);
+  const maxNumber = 100;
+  const number1 = Math.ceil(Math.random() * maxNumber);
+  const number2 = Math.ceil(Math.random() * maxNumber);
   const actions = ['+', '-', '*'];
   const action = actions[Math.floor(Math.random() * actions.length)];
   let correctAnswer;
